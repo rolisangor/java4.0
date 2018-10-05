@@ -13,7 +13,12 @@ let money = prompt("Ваш бюджет на месяц?", ""),
       expenses: {
          [questionOne]: questionTwo,
          [repQuestionOne]: repQuestionTwo 
-      }
+      },
+      optionalExpenses: {
+
+      },
+      income:[],
+      savings: false
     };
 
     // Вводим в консоль наш объект  и проверяем ошибки
