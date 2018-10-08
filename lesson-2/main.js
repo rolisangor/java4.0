@@ -50,7 +50,7 @@ for (let i = 0; i < 2; i++) {
           appData.expenses[a] = b;
 
        } else {
-          console.log('error'); 
+          i--; 
        }
        i++;
     }     
@@ -75,7 +75,7 @@ for (let i = 0; i < 2; i++) {
           appData.expenses[a] = b;
 
        } else {
-          console.log('error'); 
+          i--; 
        }
            i++;
     } 
