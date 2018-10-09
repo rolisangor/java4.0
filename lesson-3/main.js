@@ -47,10 +47,11 @@ choseExspenses(); // Вызов функции
 //  Узнаём какой бюджет на 1 день
 function detectDayBudget() {
     appData.moneyPerDay = (appData.budget / 30).toFixed();
+    alert('Ежедневный бюджет ' + appData.moneyPerDay);
 }
 detectDayBudget();
 
-alert('Ежедневный бюджет ' + appData.moneyPerDay);
+
 
 
 //  Определяем какой уровень дохода пользователя
@@ -82,37 +83,21 @@ function checkSavings() {
 checkSavings(); //Вызов функции
 
 
-let questionOne,
-    questionTwo,
-    questionThree;
+let question;
 
 function chooseOptExpenses() {
+    
+        for (let i = 1; i < 4; i++) {
+            let question = prompt("Статья необязательных расходов?");
+            appData.optionalExpenses[i] = question;
+        
+        if ((typeof (question)) === 'string' && (typeof (question)) != null &&
+            question != "") {
 
-    questionOne = prompt("Статья необязательных расходов?");
-    questionTwo = prompt("Статья необязательных расходов?");
-    questionThree = prompt("Статья необязательных расходов?");
-
-    while ((typeof (questionOne)) !== "string" || questionOne == "" ||
-        (typeof (questionOne)) == null) {
-
-        questionOne = prompt("Статья необязательных расходов?");
+        } else {
+            i--;
+        }
     }
-
-    while ((typeof (questionTwo)) !== "string" || questionTwo == "" ||
-        (typeof (questionTwo)) == null) {
-
-        questionTwo = prompt("Статья необязательных расходов?");
-    }
-
-    while ((typeof (questionThree)) !== "string" || questionThree == "" ||
-        (typeof (questionThree)) == null) {
-
-        questionThree = prompt("Статья необязательных расходов?");
-    }
-
-    appData.optionalExpenses[1] = questionOne;
-    appData.optionalExpenses[2] = questionTwo;
-    appData.optionalExpenses[3] = questionThree;
 }
 chooseOptExpenses();
 
