@@ -43,16 +43,18 @@ function choseExspenses() {
 }
 choseExspenses(); // Вызов функции
 
-//  Узнаём какой бюджет на 1 день   ПЕРВЫЙ ВАРИАНТ !!!
+/*
+ //  Узнаём какой бюджет на 1 день   ПЕРВЫЙ ВАРИАНТ !!!
 function detectDayBudget(a, b) {
 
     return a / b;  
 }
 appData.moneyPerDay = detectDayBudget(appData.budget, 30).toFixed();
-alert('Ежедневный бюджет ' + appData.moneyPerDay);
+alert('Ежедневный бюджет ' + appData.moneyPerDay); 
+*/
 
 
-/* 
+
 //  Узнаём какой бюджет на 1 день    ВТОРОЙ ВАРИАНТ !!!
 
 function detectDayBudget() {
@@ -60,7 +62,7 @@ function detectDayBudget() {
     alert('Ежедневный бюджет ' + appData.moneyPerDay);
 }
 detectDayBudget(); 
-*/
+
 
 
 //  Определяем какой уровень дохода пользователя
