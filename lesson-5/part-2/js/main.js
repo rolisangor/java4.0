@@ -22,15 +22,4 @@ let btnStart = document.getElementById('start'), // Начать расчет
     monthValue = document.querySelector('.month-value'), // Месяц
     dayValue = document.querySelector('.day-value'); // День
 
-    console.log(expensesItemBtn);
-    console.log(optionalExpBtn);
-    console.log(countBudgetBtn);
-    console.log(checkSavings);
-    console.log(btnStart);
-
-    console.log(budgetValue);
-    console.log(dayBudgetValue);
-    console.log(levelValue);
-    console.log(expensesValue);
-    console.log(exspensesItem);
    
