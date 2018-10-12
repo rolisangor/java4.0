@@ -1,0 +1,72 @@
+body {
+   background-color:#252526;
+   color: #ffffff;
+   font-family: 'Neucha', sans-serif;
+}
+.show-day {
+   text-align: center;
+   margin-top: 50px;
+   &-text {
+      font-size: 40px;
+      color: #2B7DCC;
+      display: inline-block;
+   }
+   .day {
+      display: inline-block;
+      font-size: 45px;
+      margin-left: 20px;
+      color: #99C794;
+   }
+}
+
+.box {
+   // border: 5px solid #193822;
+   border-radius: 5px;
+   text-align: center;
+   display: inline-block;
+   position: relative;
+   left: 50%;
+   transform: translateX(-50%);
+   width: auto;
+   padding: 100px;
+   box-shadow: 0 0px 40px rgba(255,255,200,0.9);
+   background: url(../img/grad-670x376.jpg) no-repeat center center;
+   background-size: cover;
+   &-label {
+      display: inline-block;
+      color: #E3EACE;
+      font-size: 20px;
+      font-weight: 900;
+   }
+   &-input {
+      display: block;
+      width: 80%;
+      margin: auto;
+      background-color: #252526;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 10px;
+      color: #99C794;
+      font-size: 18px;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      
+   }
+   &-btn {
+      display: block;
+      position: relative;
+      margin: auto;
+      font-size: 20px;
+      font-weight: 900;
+      background-color: #E3EACE;
+      border: none;
+      border-radius: 6px;
+      padding: 5px 40px;
+      margin-top: 30px;
+      cursor: pointer;
+      &:hover {
+         background-color: darken(#E3EACE, 10%);
+         color: #D55C12;
+      }
+   }
+}
