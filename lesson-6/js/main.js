@@ -64,7 +64,7 @@ let money, time;
 
 			 if (exspensesItem.value != "") {
 
-				  expensesItemBtn.removeAttribute('disabled');
+				  expensesItemBtn.disabled = false;
 			 }
 		});
   } 
@@ -82,9 +82,7 @@ expensesItemBtn.addEventListener("click", function() {
                 
             appData.expenses[a] = b; // Добавляем в объект ответы пользователю
             sum += +b;
-         } else {
-            i--;
-         }
+         } 
       }
 		expensesValue.textContent = sum;
 });
