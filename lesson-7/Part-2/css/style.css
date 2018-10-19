@@ -35,7 +35,6 @@ body {
 }
 
 .timer {
-  /* border: 1px solid red; */
   border-radius: 10px;
   position: absolute;
   top: 20%;

@@ -24,10 +24,9 @@ window.addEventListener('DOMContentLoaded', function(){
         boxHours.textContent = addZero(h);
         boxMinutes.textContent = addZero(m);
         boxSeconds.textContent = addZero(s);
-
     }
+    
     setInterval(getTime, 1000);
-
     
 
 
