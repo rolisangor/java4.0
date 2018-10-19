@@ -23,18 +23,18 @@ body {
   background-size: cover;
 }
 
-.date {
+.timer-numbers {
   position: relative;
   margin-top: 10%;
   left: 50%;
   transform: translateX(-50%);
-  width: 700px;
-  height: 300px;
+  width: 800px;
+  height: 400px;
   color: #C78030;
   font-size: 130px;
 }
 
-.timer{
+.timer {
   /* border: 1px solid red; */
   border-radius: 10px;
   position: absolute;
