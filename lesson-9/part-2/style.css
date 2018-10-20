@@ -1,0 +1,16 @@
+#age {
+   position: absolute;
+   top:30%;
+   left: 50%;
+   transform: translateX(-50%);
+   color: coral;
+   padding: 15px;
+   font-size: 40px;
+   box-shadow: 0px 0px 10px 0px coral;
+   border: none;
+   border-radius: 6px;
+}
+
+body {
+   background-color:#FF9585;
+}

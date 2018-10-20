@@ -27,12 +27,5 @@ window.addEventListener('DOMContentLoaded', function(){
     }
     
     setInterval(getTime, 1000);
-    
-
-
-
-    
-
-
-
+   
 });
