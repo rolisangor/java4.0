@@ -4,11 +4,13 @@
  let age = document.getElementById('age');
 
 let user = {
-   value : age.value,
-   showUser : function (surname, name) {
+   value : age.value
+  
+};
+
+function showUser (surname, name) {
       alert("Пользователь " + surname + " " + name + ", его возраст " + this.value);
 }
-}
 
-user.showUser('vitalii', 'sili');
-user.showUser('ivan', 'lopen')
+
+showUser.call(user, 'vitalii', 'sili');
