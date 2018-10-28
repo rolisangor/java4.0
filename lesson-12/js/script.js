@@ -142,8 +142,6 @@ window.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    //  Отправка контактной формы
-
     let formContainer = document.querySelector('.contact-form'),
         contactForm = formContainer.getElementsByTagName('form')[0],
         contactInput = contactForm.getElementsByTagName('input');
