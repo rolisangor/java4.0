@@ -130,7 +130,8 @@ window.addEventListener('DOMContentLoaded', function () {
 
     let form = document.querySelector('.main-form'),
         input = form.getElementsByTagName('input')[0],
-        statusMessage = document.createElement('div');
+        statusMessage = document.createElement('div'),
+        formInputs = document.querySelectorAll('input');
 
     statusMessage.classList.add('status');
 
@@ -194,8 +195,8 @@ window.addEventListener('DOMContentLoaded', function () {
 
             }
             function clear() {
-                for (let i = 0; i < input.length; i++) {
-                    input[i].value = '';
+                for (let i = 0; i < formInputs.length; i++) {
+                    formInputs[i].value = '';
                 }
             }
 
