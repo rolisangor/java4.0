@@ -2,7 +2,7 @@
 /*!*******************************!*\
   !*** ./src/js/parts/modal.js ***!
   \*******************************/
-/*! no static exports found */function(e,t){e.exports=function(){let e=document.querySelector(".header_btn"),t=document.querySelector(".popup_engineer"),n=document.querySelector(".overlay"),r=document.querySelectorAll(".popup_close")[1];e.addEventListener("click",()=>{t.style.display="flex",n.style.display="flex"}),n.addEventListener("click",()=>{n.style.display="none",t.style.display="none"}),r.addEventListener("click",()=>{n.style.display="none",t.style.display="none"})}},"./src/js/script.js":
+/*! no static exports found */function(e,t){e.exports=function(){let e=document.querySelector(".header_btn"),t=document.querySelector(".popup_engineer");popupClose=document.querySelectorAll(".popup_close")[1],e.addEventListener("click",()=>{t.style.display="flex"}),t.addEventListener("click",e=>{let n=e.target||e.srcElement;n!=t&&n!=popupClose&&"closed"!=n.className?t.style.display="flex":t.style.display="none",console.log(n)})}},"./src/js/script.js":
 /*!**************************!*\
   !*** ./src/js/script.js ***!
   \**************************/

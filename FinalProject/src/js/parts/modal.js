@@ -1,23 +1,21 @@
 function modal() {
 
    let headerBtn = document.querySelector('.header_btn'),
-       modalEngineer = document.querySelector('.popup_engineer'),
-       overlay = document.querySelector('.overlay'),
+       modalEngineer = document.querySelector('.popup_engineer');
        popupClose = document.querySelectorAll('.popup_close')[1];
 
    headerBtn.addEventListener('click', () => {
       modalEngineer.style.display = 'flex';
-      overlay.style.display = 'flex';
    });
 
-   overlay.addEventListener('click', () => {
-      overlay.style.display = 'none';
-      modalEngineer.style.display = 'none';
-   });
-
-   popupClose.addEventListener('click', () => {
-      overlay.style.display = 'none';
-      modalEngineer.style.display = 'none';
+   modalEngineer.addEventListener('click', (event) => {
+    let target = event.target || event.srcElement;
+        if(target != modalEngineer && target != popupClose && target.className != 'closed') {
+            modalEngineer.style.display = 'flex';
+        }else {
+            modalEngineer.style.display = 'none';
+        }
+        console.log(target);
    });
 }
 
