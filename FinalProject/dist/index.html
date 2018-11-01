@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="slick/slick-theme.css">
     <!-- Animate -->
     <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/sweetalert2.min.css">
   </head>
 
   <body>
@@ -814,10 +815,10 @@
             <div class="popup_content text-center">
                 <button type="button" class="popup_close"><strong class="closed">&times;</strong></button>
                 <div class="popup_form">
-                    <form class="form" action="#">
+                    <form class="form" action="#" id="w">
                       <h2>Запишитесь сегодня на <br><span>бесплатный замер</span></h2>
                       <input class="form-control form_input" name="user_name" required type="text" placeholder="Введите ваше имя">
-                      <input class="form-control form_input" name="user_phone" required type="text" placeholder="Введите телефон">
+                      <input class="form-control form_input" id="a" name="user_phone" required type="text" placeholder="Введите телефон">
                       <button class="text-uppercase btn-block button" name="submit" type="submit">Вызвать замерщика!</button>
                       <p class="form_notice">Ваши данные конфиденциальны</p>
                     </form>
@@ -983,6 +984,7 @@
             });
         });   
     </script>
+    <script src="js/sweetalert2.min.js"></script>
 
 
 

@@ -15,7 +15,6 @@ function modal() {
         }else {
             modalEngineer.style.display = 'none';
         }
-        console.log(target);
    });
 }
 

@@ -11,6 +11,9 @@ body {
   font-style: normal;
   color: #000000;
 }
+.status {
+  color: red;
+}
 a:hover {
   text-decoration: none;
 }
@@ -879,6 +882,8 @@ textarea:focus {
   margin-top: 1rem;
   padding: 1rem 5rem;
 }
+
+
 /*Media*/
 @media (max-width: 1400px) {
   .main {
