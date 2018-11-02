@@ -1,6 +1,5 @@
 function sendForm () {
 
-
    let form = document.querySelectorAll('form'),
        input = document.querySelectorAll('input');
 
@@ -40,9 +39,10 @@ function sendForm () {
       for(let i = 0; i < input.length; i++) {
          input[i].addEventListener('keypress', function(e) {
             let key = e.keyCode;
-            let atributeName = input[i].getAttribute('name');
+            let atributeName = input[i].getAttribute('name'),
+                inputId = input[i].id;
 
-            if(atributeName == 'user_phone') {
+            if(atributeName == 'user_phone' || inputId == 'width' || inputId == 'height') {
                if (key < 48 || key > 57) {
                   e.preventDefault();
             }
