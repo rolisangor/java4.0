@@ -6,7 +6,8 @@ function popupCalc() {
        inputWidth = document.querySelector('#width'),
        inputHeight = document.querySelector('#height'),
        inputSelect = document.querySelector('#view_type'),
-       chckbx = document.querySelectorAll('input[type="checkbox"]');
+       chckbx = document.querySelectorAll('input[type="checkbox"]'),
+       html = document.querySelector('html');
 
        
        chckbx[1].addEventListener('change', function() {
@@ -27,14 +28,17 @@ function popupCalc() {
        for (let i = 0; i < popupCalcShow.length; i++) {
          popupCalcShow[i].addEventListener('click', () => {
             popupCalc.style.display = 'flex';
+            html.style.overflow = 'hidden';
          });
        }
 
        popupCalc.addEventListener('click', (event) => {
           let target = event.target;
+                html.style.overflow = 'hidden';
              if(target.className == 'popup_calc_close' || target.className == 'closed'){
                 popupCalc.style.display = 'none';
                 // clear data object IMPORTANT!!!!
+                html.style.overflow = 'scroll';
              }
              else if(target.className == 'button popup_calc_button'){
                 popupCalc.style.opacity = '0';
@@ -48,24 +52,24 @@ function popupCalc() {
                 popupCalc.style.display = 'none';
                 popupCalcProfile.style.display = 'none';
                 // clear data object IMPORTANT!!!!
+                html.style.overflow = 'scroll';
              }
              else if(target.className == 'button popup_calc_profile_button'){
                popupCalcProfile.style.opacity = '0';
                popupCalcEnd.style.display = 'flex';
-               console.log(options);
             }
        });
 
-       popupCalcEnd.addEventListener('submit', (event) => {
+       popupCalcEnd.addEventListener('click', (event) => {
          let target = event.target;
             if(target.className == 'popup_calc_end_close' || target.className == 'closed'){
                 popupCalc.style.display = 'none';
                 popupCalcProfile.style.display = 'none';
                 popupCalcEnd.style.display = 'none';
+                html.style.overflow = 'scroll';
                 // clear data object IMPORTANT!!!!
              }
        });    
-       console.log(options);
 }
 
 module.exports = popupCalc

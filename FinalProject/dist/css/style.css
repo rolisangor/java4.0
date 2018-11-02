@@ -11,6 +11,9 @@ body {
   font-style: normal;
   color: #000000;
 }
+.modal-open {
+  overflow: hidden !important;
+}
 .status {
   color: red;
 }

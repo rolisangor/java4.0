@@ -1,8 +1,14 @@
 function sendForm () {
 
+    function clear(){
+        for (let i = 0; i < input.length; i++) {
+            input[i].value = '';
+    }
+}
+
    let form = document.querySelectorAll('form'),
        input = document.querySelectorAll('input');
-
+    
       for(let i = 0; i < form.length; i++) {
          form[i].addEventListener('submit', (event) => {
            event.preventDefault();
@@ -24,12 +30,14 @@ function sendForm () {
                     '',
                     'success'
                   );
+                  clear();
                }else {
                 swal({
                     type: 'error',
                     title: 'Oops...',
                     text: 'Ошибка!'
                   });
+                  clear();
                }
             });
 

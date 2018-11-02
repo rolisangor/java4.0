@@ -134,23 +134,23 @@
 
         <!-- Slider -->
         <div class="glazing_slider">
-          <div class="glazing_block text-center wow fadeInUp">
+          <div class="glazing_block text-center wow fadeInUp exp">
             <img src="img/glazing/icons/1.png" alt="#">
             <a class="tree_link active">Деревянное <br>остекление</a>
           </div>
-          <div class="glazing_block text-center wow fadeInUp" data-wow-delay="0.1s">
+          <div class="glazing_block text-center wow fadeInUp exp" data-wow-delay="0.1s">
             <img src="img/glazing/icons/2.png" alt="#">
             <a class="aluminum_link">Алюминиевое <br>остекление</a>
           </div>
-          <div class="glazing_block text-center wow fadeInUp" data-wow-delay="0.2s">
+          <div class="glazing_block text-center wow fadeInUp exp" data-wow-delay="0.2s">
             <img src="img/glazing/icons/3.png" alt="#">
             <a class="plastic_link">Остекление <br>пластиковыми <br>рамами</a>
           </div>
-          <div class="glazing_block text-center wow fadeInUp" data-wow-delay="0.3s">
+          <div class="glazing_block text-center wow fadeInUp exp" data-wow-delay="0.3s">
             <img src="img/glazing/icons/4.png" alt="#">
             <a class="french_link">Французское <br>остекление <br>(панорамное)</a>
           </div>
-          <div class="glazing_block text-center wow fadeInUp" data-wow-delay="0.4s">
+          <div class="glazing_block text-center wow fadeInUp exp" data-wow-delay="0.4s">
             <img src="img/glazing/icons/5.png" alt="#">
             <a class="rise_link">Остекление <br>с выносом</a>
           </div>
@@ -795,7 +795,7 @@
     <div class="popup">
         <div class="popup_dialog">
             <div class="popup_content text-center">
-                <button type="button" class="popup_close"><strong>&times;</strong></button>
+                <button type="button" class="popup_close"><strong class="closed">&times;</strong></button>
                 <div class="popup_form">
                     <form class="form" action="#">
                       <h2>Введите ваши данные <br>и нажмите заказать звонок</h2>
@@ -852,7 +852,7 @@
                 </div>
                 <input class="form-control" id="width" type="text" placeholder="Ширина" required>
                 <label for="width">мм</label>
-                <div class="multiplication"><strong>&times;</strong></div>
+                <div class="multiplication"><strong >&times;</strong></div>
                 <input class="form-control" id="height" type="text" placeholder="Высота" required>
                 <label for="height">мм</label>
                 <button class="button popup_calc_button">Далее</button>
@@ -915,8 +915,8 @@
     <script>
         $(document).ready(function() {
             $('.glazing_slider').slick({
-                infinite: true,
-                slidesToShow: 5,
+                infinite: false,
+                slidesToShow: 4,
                 slidesToScroll: 1,
                 responsive: [{
                     breakpoint: 1201,
@@ -984,11 +984,10 @@
             });
         });   
     </script>
-    <script src="js/sweetalert2.min.js"></script>
 
 
 
-
+<script src="js/sweetalert2.min.js"></script>
 <script src="js/main.js"></script>
   </body>
 </html>
