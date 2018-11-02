@@ -32,6 +32,9 @@ function tabsGlass () {
                   hideTabContent(0);
                   showTabContent(i);
                   break;
+               }else {
+                hideTabContent(0);
+                showTabContent(i);
                }
             }
       });  
