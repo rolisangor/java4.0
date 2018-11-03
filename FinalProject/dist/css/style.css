@@ -594,8 +594,71 @@ textarea:focus {
   line-height: 1.6;
 }
 .sale .eTimer {
-  text-align: center;
+  /* text-align: center; */
+  width: 370px;
+	height: 150px;
+	border: 2px solid #D1D1D1;
+	border-radius: 10px;
+	text-align: center;
+  padding-top: 10px;
+  position: relative;
 }
+.box {
+	width: 30px;
+	height: 50px;
+	background-color: #393939;
+	display: inline-block;
+	/* margin-top: 25px; */
+	border-radius: 6px;
+}
+.days-box,
+.hours-box,
+.minutes-box,
+.seconds-box {
+	display: inline-block;
+	margin-left: 10px;
+}
+.days-box {
+	margin-left: 0;
+}
+
+.timer-text {
+	font-size: 12px;
+}
+
+.days {
+	color: #ffffff;
+	position: absolute;
+	font-size: 40px;
+	top:61px;
+	left:22px;
+	letter-spacing: 11px;
+}
+.hours {
+	color: #ffffff;
+	position: absolute;
+	font-size: 40px;
+	top:61px;
+	left:134px;
+	letter-spacing: 12px;
+}
+.minutes {
+	color: #ffffff;
+	position: absolute;
+	font-size: 40px;
+	top:61px;
+	left:210px;
+	letter-spacing: 12px;
+}
+.seconds {
+	color: #ffffff;
+	position: absolute;
+	font-size: 40px;
+	top:61px;
+	left:288px;
+	letter-spacing: 12px;
+}
+
 /*Contacts*/
 .contacts {
   padding: 6rem 0;
@@ -1061,6 +1124,7 @@ textarea:focus {
     margin-bottom: 3rem;
     text-align: center;
   }
+  
   .contacts_info {
     margin-top: 3rem;
   }
