@@ -6,7 +6,8 @@ window.addEventListener('DOMContentLoaded', function() {
        popupCalc = require('./parts/popup_calc.js'),
        tabsGlass = require('./parts/tabs.js'),
        decorationTabs = require('./parts/decoration_tabs.js'),
-       timer = require('./parts/timer.js');
+       timer = require('./parts/timer.js'),
+       popup = require('./parts/popup.js');
 
    modal();
    sendForm();
@@ -14,4 +15,5 @@ window.addEventListener('DOMContentLoaded', function() {
    tabsGlass();
    decorationTabs();
    timer();
+   popup();
 });

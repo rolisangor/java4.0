@@ -10,7 +10,11 @@
 /*!*******************************!*\
   !*** ./src/js/parts/modal.js ***!
   \*******************************/
-/*! no static exports found */function(e,t){e.exports=function(){let e=document.querySelector(".header_btn"),t=document.querySelector(".popup_engineer"),l=document.querySelectorAll(".popup_close")[1],n=document.querySelector("html");e.addEventListener("click",()=>{n.style.overflow="hidden",t.style.display="flex"}),t.addEventListener("click",e=>{let r=e.target||e.srcElement;r!=t&&r!=l&&"closed"!=r.className?t.style.display="flex":(t.style.display="none",n.style.overflow="scroll")})}},"./src/js/parts/popup_calc.js":
+/*! no static exports found */function(e,t){e.exports=function(){let e=document.querySelector(".header_btn"),t=document.querySelector(".popup_engineer"),l=document.querySelectorAll(".popup_close")[1],n=document.querySelector("html");e.addEventListener("click",()=>{n.style.overflow="hidden",t.style.display="flex"}),t.addEventListener("click",e=>{let r=e.target||e.srcElement;r!=t&&r!=l&&"closed"!=r.className?t.style.display="flex":(t.style.display="none",n.style.overflow="scroll")})}},"./src/js/parts/popup.js":
+/*!*******************************!*\
+  !*** ./src/js/parts/popup.js ***!
+  \*******************************/
+/*! no static exports found */function(e,t){e.exports=function(){let e=document.querySelector(".popup"),t=document.querySelectorAll(".phone_link"),l=document.querySelector("html"),n=e.querySelector(".popup_close");setTimeout(()=>{e.style.display="flex",l.style.overflow="hidden"},6e4),(()=>{for(let n=0;n<t.length;n++)t[n].addEventListener("click",()=>{e.style.display="flex",l.style.overflow="hidden"})})(),e.addEventListener("click",t=>{let r=t.target||t.srcElement;r!=e&&r!=n&&"closed"!=r.className?e.style.display="flex":(e.style.display="none",l.style.overflow="scroll")})}},"./src/js/parts/popup_calc.js":
 /*!************************************!*\
   !*** ./src/js/parts/popup_calc.js ***!
   \************************************/
@@ -26,4 +30,4 @@
 /*!**************************!*\
   !*** ./src/js/script.js ***!
   \**************************/
-/*! no static exports found */function(e,t,l){window.addEventListener("DOMContentLoaded",function(){"use strict";let e=l(/*! ./parts/modal.js */"./src/js/parts/modal.js"),t=l(/*! ./parts/form.js */"./src/js/parts/form.js"),n=l(/*! ./parts/popup_calc.js */"./src/js/parts/popup_calc.js"),r=l(/*! ./parts/tabs.js */"./src/js/parts/tabs.js"),o=l(/*! ./parts/decoration_tabs.js */"./src/js/parts/decoration_tabs.js"),s=l(/*! ./parts/timer.js */"./src/js/parts/timer.js");e(),t(),n(),r(),o(),s()})}});
+/*! no static exports found */function(e,t,l){window.addEventListener("DOMContentLoaded",function(){"use strict";let e=l(/*! ./parts/modal.js */"./src/js/parts/modal.js"),t=l(/*! ./parts/form.js */"./src/js/parts/form.js"),n=l(/*! ./parts/popup_calc.js */"./src/js/parts/popup_calc.js"),r=l(/*! ./parts/tabs.js */"./src/js/parts/tabs.js"),o=l(/*! ./parts/decoration_tabs.js */"./src/js/parts/decoration_tabs.js"),s=l(/*! ./parts/timer.js */"./src/js/parts/timer.js"),c=l(/*! ./parts/popup.js */"./src/js/parts/popup.js");e(),t(),n(),r(),o(),s(),c()})}});
