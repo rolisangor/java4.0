@@ -602,6 +602,7 @@ textarea:focus {
 	text-align: center;
   padding-top: 10px;
   position: relative;
+  background-color:#ffffff;
 }
 .box {
 	width: 30px;

@@ -1,62 +1,47 @@
  function timer () {
-   let deadline = '2019-07-04';
-    
-        let getTimeRemaining = (endtime) => {
-            let t = Date.parse(endtime) - Date.parse(new Date()),
-                seconds = Math.floor((t/1000) % 60),
-                minutes = Math.floor((t/1000/60) % 60),
-                hours = Math.floor((t/1000/60/60 % 24)),
-                days = Math.floor((t/(1000*60*60*24)));
-                
-            return {
-                'total' : t,
-                'hours' : hours,
-                'minutes' : minutes,
-                'seconds' : seconds,
-                'days' : days
-            };
-                
+   
+    function countdown(endDate) {
+        let days, hours, minutes, seconds;
+        
+        endDate = new Date(endDate).getTime();
+        
+        if (isNaN(endDate)) {
+          return;
+        }
+        
+        setInterval(calculate, 1000);
+        
+        function calculate() {
+          let startDate = new Date();
+          startDate = startDate.getTime();
+          
+          let timeRemaining = parseInt((endDate - startDate) / 1000);
+          
+          if (timeRemaining >= 0) {
+            days = parseInt(timeRemaining / 86400);
+            timeRemaining = (timeRemaining % 86400);
             
-        };
-    
-        let setClock = (endtime) => {
-            let timer = document.querySelector('.eTimer'),
-                hours = timer.querySelector('.hours'),
-                minutes = timer.querySelector('.minutes'),
-                seconds = timer.querySelector('.seconds'),
-                days = timer.querySelector('.days'),
-                timeInterval = setInterval(updateClock, 1000);
-    
-            function updateClock() {
-    
-                function addZero(n) {
-                    if (n < 10) {
-                        return '0' + n;
-                    } 
-                    else {
-                        return n;
-                    }
-                }
-    
-                let t = getTimeRemaining(endtime);
-    
-                    hours.textContent = addZero(t.hours);
-                    minutes.textContent = addZero(t.minutes);
-                    seconds.textContent = addZero(t.seconds);
-                    days.textContent = addZero(t.days);
-    
-                    if(t.total <= 0) {
-                        clearInterval(timeInterval);
-    
-                        hours.textContent = addZero(0);
-                        minutes.textContent = addZero(0);
-                        seconds.textContent = addZero(0);
-                        days.textContent = addZero(0);
-                    }
-            }
-        };
-    
-        setClock(deadline);
+            hours = parseInt(timeRemaining / 3600);
+            timeRemaining = (timeRemaining % 3600);
+            
+            minutes = parseInt(timeRemaining / 60);
+            timeRemaining = (timeRemaining % 60);
+            
+            seconds = parseInt(timeRemaining);
+            
+            document.querySelector(".days").innerHTML = parseInt(days, 10);
+            document.querySelector(".hours").innerHTML = ("0" + hours).slice(-2);
+            document.querySelector(".minutes").innerHTML = ("0" + minutes).slice(-2);
+            document.querySelector(".seconds").innerHTML = ("0" + seconds).slice(-2);
+          } else {
+            return;
+          }
+        }
+      }
+      
+      (function () { 
+        countdown('07/04/2019 00:00:00 AM'); 
+      }());
 }
 
 module.exports = timer; 
