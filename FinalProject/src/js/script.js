@@ -7,7 +7,8 @@ window.addEventListener('DOMContentLoaded', function() {
        tabsGlass = require('./parts/tabs.js'),
        decorationTabs = require('./parts/decoration_tabs.js'),
        timer = require('./parts/timer.js'),
-       popup = require('./parts/popup.js');
+       popup = require('./parts/popup.js'),
+       showImage = require('./parts/images.js');
 
    modal();
    sendForm();
@@ -16,4 +17,5 @@ window.addEventListener('DOMContentLoaded', function() {
    decorationTabs();
    timer();
    popup();
+   showImage();
 });

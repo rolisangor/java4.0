@@ -516,6 +516,7 @@ textarea:focus {
 .works img {
   margin-bottom: 3rem;
 }
+
 .works a[data-fancybox="gallery"] .lupa {
   position: absolute;
   top: 0;
