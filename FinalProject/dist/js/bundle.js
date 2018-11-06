@@ -1,37 +1,653 @@
-!function(e){var t={};function l(n){if(t[n])return t[n].exports;var r=t[n]={i:n,l:!1,exports:{}};return e[n].call(r.exports,r,r.exports,l),r.l=!0,r.exports}l.m=e,l.c=t,l.d=function(e,t,n){l.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},l.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},l.t=function(e,t){if(1&t&&(e=l(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(l.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var r in e)l.d(n,r,function(t){return e[t]}.bind(null,r));return n},l.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return l.d(t,"a",t),t},l.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},l.p="",l(l.s="./src/js/script.js")}({"./src/js/parts/decoration_tabs.js":
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/js/script.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./src/js/parts/decoration_tabs.js":
 /*!*****************************************!*\
   !*** ./src/js/parts/decoration_tabs.js ***!
   \*****************************************/
-/*! no static exports found */function(e,t){e.exports=function(){let e=document.querySelector(".decoration_slider"),t=document.querySelectorAll(".tab-content"),l=document.querySelectorAll(".decoration_item"),n=document.querySelectorAll(".no_click"),r=e.getElementsByTagName("a");function o(e){for(let l=e;l<t.length;l++)t[l].style.display="none",n[l].classList.remove("after_click")}function s(e){"none"==t[e].style.display&&(t[e].style.display="flex",n[e].classList.add("after_click"))}o(1),e.addEventListener("click",e=>{let t=e.target;for(let e=0;e<n.length;e++){if(s(e),t==n[e]||t==r[e]||t==l[e]){o(0),s(e);break}o(0),s(e)}})}},"./src/js/parts/form.js":
-/*!******************************!*\
-  !*** ./src/js/parts/form.js ***!
-  \******************************/
-/*! no static exports found */function(e,t){e.exports=function(){function e(){for(let e=0;e<l.length;e++)l[e].value=""}let t=document.querySelectorAll("form"),l=document.querySelectorAll("input");for(let l=0;l<t.length;l++)t[l].addEventListener("submit",n=>{n.preventDefault();let r=new XMLHttpRequest;r.open("POST","./server.php"),r.setRequestHeader("Content-Type","application/x-www-form-urlencoded");let o=new FormData(t[l]);r.send(o),r.addEventListener("readystatechange",()=>{r.readyState<4?swal("Идет отправка"):4===r.readyState&&200==r.status?(swal("Отправлено!","","success"),e()):(swal({type:"error",title:"Oops...",text:"Ошибка!"}),e())})});for(let e=0;e<l.length;e++)l[e].addEventListener("keypress",function(t){let n=t.keyCode,r=l[e].getAttribute("name"),o=l[e].id;"user_phone"!=r&&"width"!=o&&"height"!=o||(n<48||n>57)&&t.preventDefault()})}},"./src/js/parts/images.js":
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function decorationTabs () {
+
+   let decorationTabsBox = document.querySelector('.decoration_slider'),
+       decorationTabContent = document.querySelectorAll('.tab-content'),
+       decorationItem = document.querySelectorAll('.decoration_item'),
+       tabActive = document.querySelectorAll('.no_click'),
+       tabLink = decorationTabsBox.getElementsByTagName('a');
+
+       function hideTabContent(a) {
+         for(let i = a; i < decorationTabContent.length; i++) {
+            decorationTabContent[i].style.display = 'none';
+            tabActive[i].classList.remove('after_click');          
+         }
+      }
+      hideTabContent(1);
+
+      function showTabContent(b) {
+         if(decorationTabContent[b].style.display == 'none') {
+            decorationTabContent[b].style.display = 'flex';
+            tabActive[b].classList.add('after_click');        
+         }
+       }
+
+       decorationTabsBox.addEventListener('click', (event) => {
+         let target = event.target;
+         
+            for(let i = 0; i < tabActive.length; i++) {
+               showTabContent(i);
+               if (target == tabActive[i] || target == tabLink[i] || target == decorationItem[i]) {
+                  hideTabContent(0);
+                  showTabContent(i);
+                  break;
+               } else {
+                  hideTabContent(0);
+                  showTabContent(i);
+               }
+            }
+      });  
+}
+
+module.exports = decorationTabs
+
+/***/ }),
+
+/***/ "./src/js/parts/images.js":
 /*!********************************!*\
   !*** ./src/js/parts/images.js ***!
   \********************************/
-/*! no static exports found */function(e,t){e.exports=function(){let e=document.querySelector(".works").querySelectorAll("a"),t=document.querySelector("body"),l=document.createElement("DIV"),n=document.createElement("IMG");(()=>{for(let r=0;r<e.length;r++){e[r].setAttribute("data-fancybox","gallery");let o=e[r].getAttribute("href");e[r].addEventListener("click",e=>{e.preventDefault(),t.appendChild(l),l.appendChild(n),n.src=o,document.querySelector("html").style.overflow="hidden",l.style.cssText="position: fixed;                                         width: 100%;                                         height: 100%;                                         background-color:rgba(0,0,0,0.7);                                         top: 0;                                         left: 0;                                         display: flex;",n.style.cssText="position: absolute;                                                top: 50%;                                                left: 50%;                                                transform: translate(-50%,-50%);"})}})(),l.addEventListener("click",e=>{e.target==l&&(l.style.display="none",document.querySelector("html").style.overflow="scroll")})}},"./src/js/parts/modal.js":
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function showImage () {
+
+   let imagesParent = document.querySelector('.works'),
+       images = imagesParent.querySelectorAll('a'),
+       body = document.querySelector('body'),
+       overlay = document.createElement('DIV'),
+       overleyContent = document.createElement('IMG');
+
+    let hideScroll = () => {
+        document.querySelector('html').style.overflow = 'hidden'
+    };
+    
+    let showScroll = () => {
+        document.querySelector('html').style.overflow = 'scroll'
+    };  
+
+    let showModalImage = () => {
+        for(let i = 0; i < images.length; i++) {
+            images[i].setAttribute('data-fancybox', 'gallery');
+            let BigImage = images[i].getAttribute('href');
+
+            images[i].addEventListener('click', (event) => {
+                event.preventDefault();
+                body.appendChild(overlay);
+                overlay.appendChild(overleyContent);
+                overleyContent.src = BigImage;
+                hideScroll();
+                overlay.style.cssText = "position: fixed;\
+                                         width: 100%;\
+                                         height: 100%;\
+                                         background-color:rgba(0,0,0,0.7);\
+                                         top: 0;\
+                                         left: 0;\
+                                         display: flex;";
+
+                overleyContent.style.cssText = "position: absolute;\
+                                                top: 50%;\
+                                                left: 50%;\
+                                                transform: translate(-50%,-50%);";                         
+
+            });
+        }
+    };
+
+    let hideModalImage = () => {
+            overlay.addEventListener('click', (event) => {
+                let target = event.target;
+                if (target == overlay) {
+                    overlay.style.display = 'none';
+                    showScroll();
+                }
+            });
+    };
+
+    showModalImage();
+    hideModalImage();
+}
+
+module.exports = showImage
+
+/***/ }),
+
+/***/ "./src/js/parts/modal.js":
 /*!*******************************!*\
   !*** ./src/js/parts/modal.js ***!
   \*******************************/
-/*! no static exports found */function(e,t){e.exports=function(){let e=document.querySelector(".header_btn"),t=document.querySelector(".popup_engineer"),l=document.querySelectorAll(".popup_close")[1],n=document.querySelector("html");e.addEventListener("click",()=>{n.style.overflow="hidden",t.style.display="flex"}),t.addEventListener("click",e=>{let r=e.target||e.srcElement;r!=t&&r!=l&&"closed"!=r.className?t.style.display="flex":(t.style.display="none",n.style.overflow="scroll")})}},"./src/js/parts/popup.js":
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function modal() {
+
+   let headerBtn = document.querySelector('.header_btn'),
+       modalEngineer = document.querySelector('.popup_engineer'),
+       popupClose = document.querySelectorAll('.popup_close')[1],
+       scrollHide = document.querySelector('html');
+
+   headerBtn.addEventListener('click', () => {
+      scrollHide.style.overflow = 'hidden';
+      modalEngineer.style.display = 'flex';
+   });
+
+   modalEngineer.addEventListener('click', (event) => {
+    let target = event.target || event.srcElement;
+        if(target != modalEngineer && target != popupClose && target.className != 'closed') {
+            modalEngineer.style.display = 'flex';
+        }else {
+            modalEngineer.style.display = 'none';
+            scrollHide.style.overflow = 'scroll';
+        }
+   });
+}
+
+module.exports = modal
+
+/***/ }),
+
+/***/ "./src/js/parts/popup.js":
 /*!*******************************!*\
   !*** ./src/js/parts/popup.js ***!
   \*******************************/
-/*! no static exports found */function(e,t){e.exports=function(){let e=document.querySelector(".popup"),t=document.querySelectorAll(".phone_link"),l=document.querySelector("html"),n=e.querySelector(".popup_close");setTimeout(()=>{e.style.display="flex",l.style.overflow="hidden"},6e4),(()=>{for(let n=0;n<t.length;n++)t[n].addEventListener("click",()=>{e.style.display="flex",l.style.overflow="hidden"})})(),e.addEventListener("click",t=>{let r=t.target||t.srcElement;r!=e&&r!=n&&"closed"!=r.className?e.style.display="flex":(e.style.display="none",l.style.overflow="scroll")})}},"./src/js/parts/popup_calc.js":
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function popup () {
+
+   let popup = document.querySelector('.popup'),
+       phonePopup = document.querySelectorAll('.phone_link'),
+       scrollHide = document.querySelector('html'),
+       popupClose = popup.querySelector('.popup_close');
+
+   let showPopup = () => {
+      for (let i = 0; i < phonePopup.length; i++) {
+         phonePopup[i].addEventListener('click', (event) => {
+             event.preventDefault();
+            popup.style.display = 'flex';
+            scrollHide.style.overflow = 'hidden';
+         });
+      }
+   };
+
+   let hidePopup = () => {
+      popup.addEventListener('click', (event) => {
+         let target = event.target || event.srcElement;
+             if(target != popup && target != popupClose && target.className != 'closed') {
+                 popup.style.display = 'flex';
+             }else {
+                 popup.style.display = 'none';
+                 scrollHide.style.overflow = 'scroll';
+             }
+        });
+   };
+
+   let showPopupAfter = () => {
+      popup.style.display = 'flex';
+      scrollHide.style.overflow = 'hidden';
+   }
+
+   setTimeout(showPopupAfter, 60000);
+   showPopup();
+   hidePopup();
+   
+}
+
+module.exports = popup
+
+/***/ }),
+
+/***/ "./src/js/parts/popup_calc.js":
 /*!************************************!*\
   !*** ./src/js/parts/popup_calc.js ***!
   \************************************/
-/*! no static exports found */function(e,t){e.exports=function(){let e=document.querySelectorAll(".popup_calc_btn"),t=document.querySelector(".popup_calc"),l=document.querySelector(".popup_calc_profile"),n=document.querySelector(".popup_calc_end"),r=document.querySelector("#width"),o=document.querySelector("#height"),s=document.querySelector("#view_type"),c=document.querySelectorAll('input[type="checkbox"]'),a=document.querySelector("html");c[1].addEventListener("change",function(){c[0].checked=!c[1].checked}),c[0].addEventListener("change",function(){c[1].checked=!c[0].checked}),r.value,o.value,s.value,c.checked;for(let l=0;l<e.length;l++)e[l].addEventListener("click",()=>{t.style.display="flex",a.style.overflow="hidden"});t.addEventListener("click",e=>{let n=e.target;a.style.overflow="hidden","popup_calc_close"==n.className||"closed"==n.className?(t.style.display="none",a.style.overflow="scroll"):"button popup_calc_button"==n.className&&(t.style.opacity="0",l.style.display="flex")}),l.addEventListener("click",e=>{let r=e.target;"popup_calc_profile_close"==r.className||"closed"==r.className?(t.style.display="none",l.style.display="none",a.style.overflow="scroll"):"button popup_calc_profile_button"==r.className&&(l.style.opacity="0",n.style.display="flex")}),n.addEventListener("click",e=>{let r=e.target;"popup_calc_end_close"!=r.className&&"closed"!=r.className||(t.style.display="none",l.style.display="none",n.style.display="none",a.style.overflow="scroll")})}},"./src/js/parts/tabs.js":
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function popupCalc() {
+   let popupCalcShow = document.querySelectorAll('.popup_calc_btn'),
+       popupCalc = document.querySelector('.popup_calc'),
+       popupCalcProfile = document.querySelector('.popup_calc_profile'),
+       popupCalcEnd = document.querySelector('.popup_calc_end'),
+       inputWidth = document.querySelector('#width'),
+       inputHeight = document.querySelector('#height'),
+       inputSelect = document.querySelector('#view_type'),
+       checkbox = document.querySelectorAll('input[type="checkbox"]'),
+       scrollHide = document.querySelector('html');
+
+  let options = {};
+
+  let checkboxValue = () => {
+    for(let i = 0; i < checkbox.length; i++) {
+      if(checkbox[i].checked) {
+        options.checkbox = checkbox[i].value;
+      }
+     }
+  };
+
+
+  let selectValue = () => {
+    for(let i = 0; i < inputSelect.options.length; i++) {
+      if(inputSelect.options[i].selected){
+        options.view = inputSelect.options[i].value;
+      }
+     }
+  };
+
+
+  let checkBoxSelect = () => {
+    checkbox[1].addEventListener('change', function () {
+      checkbox[0].checked = !checkbox[1].checked;
+    });
+    checkbox[0].addEventListener('change', function () {
+      checkbox[1].checked = !checkbox[0].checked;
+    });
+  };
+
+
+  let deleteOptions = () => {
+    for (let key in options) {
+      delete options[key];
+      }
+  };
+
+  let previewImage = () => {
+    let smallImagesParent = document.querySelectorAll('.balcon_icons img'),
+        parent = document.querySelector('.balcon_icons'),
+        bigImagesParend = document.querySelectorAll('.big_img img');
+
+    function hide(a) {
+      for (let i = a; i < bigImagesParend.length; i++) {
+        bigImagesParend[i].style.display = 'none';
+        smallImagesParent[i].classList.remove('calc-active');
+      }
+    }
+    hide(1);
+
+    function show(b) {
+      if (bigImagesParend[b].style.display == 'none') {
+        bigImagesParend[b].style.display = 'inline-block';
+        smallImagesParent[b].classList.add('calc-active');
+      }
+    }
+
+    parent.addEventListener('click', function (event) {
+      event.preventDefault();
+      let target = event.target;
+      for (let i = 0; i < smallImagesParent.length; i++) {
+        show(i);
+        if (target == smallImagesParent[i]) {
+          hide(0);
+          show(i);
+          break;
+        }
+      }
+    });
+  };
+   
+  let showPopupCalc = () => {
+    for (let i = 0; i < popupCalcShow.length; i++) {
+      popupCalcShow[i].addEventListener('click', () => {
+         popupCalc.style.display = 'flex';
+         scrollHide.style.overflow = 'hidden';
+      });
+    }
+
+    popupCalc.addEventListener('click', (event) => {
+      let target = event.target;
+            scrollHide.style.overflow = 'hidden';
+         if(target.className == 'popup_calc_close' || target.className == 'closed'){
+            popupCalc.style.display = 'none';
+            scrollHide.style.overflow = 'scroll';
+            deleteOptions();
+         }
+         else if(target.className == 'button popup_calc_button'){
+            popupCalc.style.display = 'none';
+            popupCalcProfile.style.display = 'flex';
+            options.width = inputWidth.value;
+            options.height = inputHeight.value;
+         }
+   });
+
+   popupCalcProfile.addEventListener('click', (event) => {
+    let target = event.target;
+      if(target.className == 'popup_calc_profile_close' || target.className == 'closed') {
+        popupCalc.style.display = 'none';
+        popupCalcProfile.style.display = 'none';
+        scrollHide.style.overflow = 'scroll';
+        deleteOptions();
+      }else if (target.className == 'button popup_calc_profile_button') {
+        popupCalcEnd.style.display = 'flex';
+        popupCalcProfile.style.display = 'none';
+        checkboxValue();
+        selectValue();
+        
+      }
+   });
+
+   popupCalcEnd.addEventListener('click', (event) => {
+    let target = event.target;
+       if(target.className == 'popup_calc_end_close' || target.className == 'closed'){
+           popupCalcEnd.style.display = 'none';
+           scrollHide.style.overflow = 'scroll';
+           deleteOptions();
+        }
+  });
+  };
+
+    function clear(){
+        for (let i = 0; i < input.length; i++) {
+            input[i].value = '';
+    }
+}
+
+   let form = document.querySelectorAll('form'),
+       input = document.querySelectorAll('input');
+       console.log(form);
+    
+      for(let i = 0; i < form.length; i++) {
+   
+        form[i].addEventListener('submit', (event) => {
+            event.preventDefault();
+     
+            let request = new XMLHttpRequest();
+            request.open('POST', './server.php');
+            request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+            let formData = new FormData(form[i]);
+            
+            
+           formData.forEach(function(value, key) {
+            options[key] = value;
+           });
+     
+           let json = JSON.stringify(options);
+     
+           request.send(json);
+
+            request.addEventListener('readystatechange', () => {
+               if(request.readyState < 4) {
+                swal('Идет отправка');
+               }
+               else if (request.readyState === 4 && request.status == 200) {
+                  swal(
+                    'Отправлено!',
+                    '',
+                    'success'
+                  );
+                  clear();
+                  deleteOptions();
+               }else {
+                swal({
+                    type: 'error',
+                    title: 'Oops...',
+                    text: 'Ошибка!'
+                  });
+                  clear();
+               }
+            });
+
+        }); 
+    
+   }
+ 
+      for(let i = 0; i < input.length; i++) {
+         input[i].addEventListener('keypress', function(e) {
+            let key = e.keyCode;
+            let atributeName = input[i].getAttribute('name'),
+                inputId = input[i].id;
+
+            if(atributeName == 'user_phone' || inputId == 'width' || inputId == 'height') {
+               if (key < 48 || key > 57) {
+                  e.preventDefault();
+            }
+         }
+      });
+   }
+
+       showPopupCalc();
+       previewImage();
+       checkBoxSelect(); 
+      
+}
+
+module.exports = popupCalc
+
+/***/ }),
+
+/***/ "./src/js/parts/tabs.js":
 /*!******************************!*\
   !*** ./src/js/parts/tabs.js ***!
   \******************************/
-/*! no static exports found */function(e,t){e.exports=function(){let e=document.querySelectorAll(".glazing_block"),t=document.querySelector(".glazing"),l=document.querySelector(".glazing_slider"),n=l.getElementsByTagName("a"),r=t.querySelectorAll(".row");function o(e){for(let t=e;t<r.length;t++)r[t].style.display="none",n[t].classList.remove("active")}function s(e){"none"==r[e].style.display&&(r[e].style.display="flex",n[e].classList.add("active"))}o(1),l.addEventListener("click",t=>{let r=t.target,c=l.getElementsByTagName("img");for(let t=0;t<e.length;t++){if(s(t),r==e[t]||r==n[t]||r==c[t]){o(0),s(t);break}o(0),s(t)}})}},"./src/js/parts/timer.js":
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function tabsGlass () {
+
+    let tabItem = document.querySelectorAll('.glazing_block'),
+        content = document.querySelector('.glazing'),
+        tabParent = document.querySelector('.glazing_slider'),
+        tabLink = tabParent.getElementsByTagName('a'),
+        tabContent = content.querySelectorAll('.row');
+       
+   
+       function hideTabContent(a) {
+          for(let i = a; i < tabContent.length; i++) {
+             tabContent[i].style.display = 'none';
+             tabLink[i].classList.remove('active');          
+          }
+       }
+       hideTabContent(1);
+
+       function showTabContent(b) {
+         if(tabContent[b].style.display == 'none') {
+            tabContent[b].style.display = 'flex';
+            tabLink[b].classList.add('active');        
+         }
+       }
+
+       tabParent.addEventListener('click', (event) => {
+         let target = event.target,
+             tabContentImg = tabParent.getElementsByTagName('img');
+         
+            for(let i = 0; i < tabItem.length; i++) {
+               showTabContent(i);
+               if (target == tabItem[i] || target == tabLink[i] || target == tabContentImg[i]) {
+                  hideTabContent(0);
+                  showTabContent(i);
+                  break;
+               }else {
+                hideTabContent(0);
+                showTabContent(i);
+               }
+            }
+      });  
+}
+
+module.exports = tabsGlass
+
+/***/ }),
+
+/***/ "./src/js/parts/timer.js":
 /*!*******************************!*\
   !*** ./src/js/parts/timer.js ***!
   \*******************************/
-/*! no static exports found */function(e,t){e.exports=function(){!function(e){let t,l,n,r;e=new Date(e).getTime(),isNaN(e)||setInterval(function(){let o=new Date;o=o.getTime();let s=parseInt((e-o)/1e3);s>=0&&(t=parseInt(s/86400),s%=86400,l=parseInt(s/3600),s%=3600,n=parseInt(s/60),s%=60,r=parseInt(s),document.querySelector(".days").innerHTML=parseInt(t,10),document.querySelector(".hours").innerHTML=("0"+l).slice(-2),document.querySelector(".minutes").innerHTML=("0"+n).slice(-2),document.querySelector(".seconds").innerHTML=("0"+r).slice(-2))},1e3)}("07/04/2019 00:00:00 AM")}},"./src/js/script.js":
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+ function timer () {
+   
+    function countdown(endDate) {
+        let days, hours, minutes, seconds;
+        
+        endDate = new Date(endDate).getTime();
+        
+        if (isNaN(endDate)) {
+          return;
+        }
+        
+        setInterval(calculate, 1000);
+        
+        function calculate() {
+          let startDate = new Date();
+          startDate = startDate.getTime();
+          
+          let timeRemaining = parseInt((endDate - startDate) / 1000);
+          
+          if (timeRemaining >= 0) {
+            days = parseInt(timeRemaining / 86400);
+            timeRemaining = (timeRemaining % 86400);
+            
+            hours = parseInt(timeRemaining / 3600);
+            timeRemaining = (timeRemaining % 3600);
+            
+            minutes = parseInt(timeRemaining / 60);
+            timeRemaining = (timeRemaining % 60);
+            
+            seconds = parseInt(timeRemaining);
+            
+            document.querySelector(".days").innerHTML = parseInt(days, 10);
+            document.querySelector(".hours").innerHTML = ("0" + hours).slice(-2);
+            document.querySelector(".minutes").innerHTML = ("0" + minutes).slice(-2);
+            document.querySelector(".seconds").innerHTML = ("0" + seconds).slice(-2);
+          } else {
+            return;
+          }
+        }
+      }
+      
+      (function () { 
+        countdown('07/04/2019 00:00:00 AM'); 
+      }());
+}
+
+module.exports = timer; 
+
+/***/ }),
+
+/***/ "./src/js/script.js":
 /*!**************************!*\
   !*** ./src/js/script.js ***!
   \**************************/
-/*! no static exports found */function(e,t,l){window.addEventListener("DOMContentLoaded",function(){"use strict";let e=l(/*! ./parts/modal.js */"./src/js/parts/modal.js"),t=l(/*! ./parts/form.js */"./src/js/parts/form.js"),n=l(/*! ./parts/popup_calc.js */"./src/js/parts/popup_calc.js"),r=l(/*! ./parts/tabs.js */"./src/js/parts/tabs.js"),o=l(/*! ./parts/decoration_tabs.js */"./src/js/parts/decoration_tabs.js"),s=l(/*! ./parts/timer.js */"./src/js/parts/timer.js"),c=l(/*! ./parts/popup.js */"./src/js/parts/popup.js"),a=l(/*! ./parts/images.js */"./src/js/parts/images.js");e(),t(),n(),r(),o(),s(),c(),a()})}});
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+window.addEventListener('DOMContentLoaded', function() {
+   "use strict";
+
+   let modal = __webpack_require__(/*! ./parts/modal.js */ "./src/js/parts/modal.js"),
+    //    sendForm = require('./parts/form.js'),
+       popupCalc = __webpack_require__(/*! ./parts/popup_calc.js */ "./src/js/parts/popup_calc.js"),
+       tabsGlass = __webpack_require__(/*! ./parts/tabs.js */ "./src/js/parts/tabs.js"),
+       decorationTabs = __webpack_require__(/*! ./parts/decoration_tabs.js */ "./src/js/parts/decoration_tabs.js"),
+       timer = __webpack_require__(/*! ./parts/timer.js */ "./src/js/parts/timer.js"),
+       popup = __webpack_require__(/*! ./parts/popup.js */ "./src/js/parts/popup.js"),
+       showImage = __webpack_require__(/*! ./parts/images.js */ "./src/js/parts/images.js");
+
+   modal();
+//    sendForm();
+   popupCalc();
+   tabsGlass();
+   decorationTabs();
+   timer();
+   popup();
+   showImage();
+});
+
+/***/ })
+
+/******/ });
+//# sourceMappingURL=bundle.js.map

@@ -795,9 +795,15 @@ textarea:focus {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  width: 40rem;
+  width: 43rem;
   padding: 1rem 0.5rem 4rem;
   background-color: #ffffff;
+  
+}
+.calc-active {
+  -webkit-transform: scale(1.4);
+   -ms-transform: scale(1.4);
+   transform: scale(1.4);
 }
 .popup_calc_content h2 {
   margin-bottom: 3rem;
@@ -1485,6 +1491,7 @@ textarea:focus {
   }
   .popup_calc_content .balcon_icons img {
     width: 20%;
+    
   }
   .popup_calc_content .big_img img {
     margin-bottom: 2rem;

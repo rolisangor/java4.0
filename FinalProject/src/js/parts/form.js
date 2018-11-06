@@ -7,18 +7,29 @@ function sendForm () {
 }
 
    let form = document.querySelectorAll('form'),
-       input = document.querySelectorAll('input');
+       input = document.querySelectorAll('input'),
+       formCalc = document.querySelector('#form-calc');
     
+    //    let options = {};
       for(let i = 0; i < form.length; i++) {
-         form[i].addEventListener('submit', (event) => {
-           event.preventDefault();
-           
+   
+        form[i].addEventListener('submit', (event) => {
+            event.preventDefault();
+     
             let request = new XMLHttpRequest();
             request.open('POST', './server.php');
+            // request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
             request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-
             let formData = new FormData(form[i]);
-            request.send(formData);
+
+        //     let options = {};
+        //     formData.forEach(function(value, key) {
+        //         options[key] = value;
+        //        });
+     
+        //    let json = JSON.stringify(options);
+     
+           request.send(formData);
 
             request.addEventListener('readystatechange', () => {
                if(request.readyState < 4) {
@@ -42,6 +53,7 @@ function sendForm () {
             });
 
         }); 
+    
    }
  
       for(let i = 0; i < input.length; i++) {
@@ -59,4 +71,4 @@ function sendForm () {
    }
 }
 
-module.exports = sendForm
+// module.exports = sendForm

@@ -7,7 +7,8 @@ function popup () {
 
    let showPopup = () => {
       for (let i = 0; i < phonePopup.length; i++) {
-         phonePopup[i].addEventListener('click', () => {
+         phonePopup[i].addEventListener('click', (event) => {
+             event.preventDefault();
             popup.style.display = 'flex';
             scrollHide.style.overflow = 'hidden';
          });
