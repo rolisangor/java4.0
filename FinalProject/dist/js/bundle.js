@@ -350,6 +350,13 @@ function popupCalc() {
         parent = document.querySelector('.balcon_icons'),
         bigImagesParend = document.querySelectorAll('.big_img img');
 
+    function addClassActive() {
+      for (let i = 0; i < smallImagesParent.length; i++) {
+        smallImagesParent[i].classList.add('calc-active');
+      }
+    }
+    addClassActive();
+
     function hide(a) {
       for (let i = a; i < bigImagesParend.length; i++) {
         bigImagesParend[i].style.display = 'none';
@@ -437,7 +444,6 @@ function popupCalc() {
 
    let form = document.querySelectorAll('form'),
        input = document.querySelectorAll('input');
-       console.log(form);
     
       for(let i = 0; i < form.length; i++) {
    
