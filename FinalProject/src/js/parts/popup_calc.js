@@ -11,6 +11,23 @@ function popupCalc() {
 
   let options = {};
 
+  let sizeWindowHeght = () => {
+    if(inputHeight.value == '') {
+      options.height = '0';
+    }else{
+      options.height = inputHeight.value;
+    }
+  };
+
+  let sizeWindowWidth = () => {
+    if(inputWidth.value == '') {
+      options.width = '0';
+    }
+    else {
+      options.width = inputWidth.value;
+    }
+  };
+
   let checkboxValue = () => {
     for(let i = 0; i < checkbox.length; i++) {
       if(checkbox[i].checked) {
@@ -102,12 +119,14 @@ function popupCalc() {
             scrollHide.style.overflow = 'scroll';
             deleteOptions();
          }
-         else if(target.className == 'button popup_calc_button'){
+         else if(target.className == 'button popup_calc_button' ){
             popupCalc.style.display = 'none';
             popupCalcProfile.style.display = 'flex';
-            options.width = inputWidth.value;
-            options.height = inputHeight.value;
+            sizeWindowHeght();
+            sizeWindowWidth();
          }
+           
+         
    });
 
    popupCalcProfile.addEventListener('click', (event) => {
@@ -122,7 +141,6 @@ function popupCalc() {
         popupCalcProfile.style.display = 'none';
         checkboxValue();
         selectValue();
-        
       }
    });
 

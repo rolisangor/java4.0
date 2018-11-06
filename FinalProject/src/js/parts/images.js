@@ -7,11 +7,11 @@ function showImage () {
        overleyContent = document.createElement('IMG');
 
     let hideScroll = () => {
-        document.querySelector('html').style.overflow = 'hidden'
+        document.querySelector('html').style.overflow = 'hidden';
     };
     
     let showScroll = () => {
-        document.querySelector('html').style.overflow = 'scroll'
+        document.querySelector('html').style.overflow = 'scroll';
     };  
 
     let showModalImage = () => {
