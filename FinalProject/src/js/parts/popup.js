@@ -30,6 +30,7 @@ function popup () {
    let showPopupAfter = () => {
       popup.style.display = 'flex';
       scrollHide.style.overflow = 'hidden';
+
    }
 
    setTimeout(showPopupAfter, 60000);

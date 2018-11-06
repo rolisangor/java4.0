@@ -167,6 +167,8 @@ function showImage () {
 
             images[i].addEventListener('click', (event) => {
                 event.preventDefault();
+                overlay.classList.add('animated');
+                overlay.classList.add('fadeIn');
                 body.appendChild(overlay);
                 overlay.appendChild(overleyContent);
                 overleyContent.src = BigImage;
@@ -279,6 +281,7 @@ function popup () {
    let showPopupAfter = () => {
       popup.style.display = 'flex';
       scrollHide.style.overflow = 'hidden';
+
    }
 
    setTimeout(showPopupAfter, 60000);
@@ -483,6 +486,7 @@ function popupCalc() {
                     text: 'Ошибка!'
                   });
                   clear();
+                  deleteOptions();
                }
             });
 

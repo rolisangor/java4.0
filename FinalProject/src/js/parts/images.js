@@ -21,6 +21,8 @@ function showImage () {
 
             images[i].addEventListener('click', (event) => {
                 event.preventDefault();
+                overlay.classList.add('animated');
+                overlay.classList.add('fadeIn');
                 body.appendChild(overlay);
                 overlay.appendChild(overleyContent);
                 overleyContent.src = BigImage;

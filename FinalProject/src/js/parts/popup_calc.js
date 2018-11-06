@@ -183,6 +183,7 @@ function popupCalc() {
                     text: 'Ошибка!'
                   });
                   clear();
+                  deleteOptions();
                }
             });
 
