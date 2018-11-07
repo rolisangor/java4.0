@@ -11,23 +11,6 @@ function popupCalc() {
 
   let options = {};
 
-  let sizeWindowHeght = () => {
-    if(inputHeight.value == '') {
-      options.height = '0';
-    }else{
-      options.height = inputHeight.value;
-    }
-  };
-
-  let sizeWindowWidth = () => {
-    if(inputWidth.value == '') {
-      options.width = '0';
-    }
-    else {
-      options.width = inputWidth.value;
-    }
-  };
-
   let checkboxValue = () => {
     for(let i = 0; i < checkbox.length; i++) {
       if(checkbox[i].checked) {
@@ -110,8 +93,7 @@ function popupCalc() {
          scrollHide.style.overflow = 'hidden';
       });
     }
-
-    popupCalc.addEventListener('click', (event) => {
+    function showModalCalc(event){
       let target = event.target;
             scrollHide.style.overflow = 'hidden';
          if(target.className == 'popup_calc_close' || target.className == 'closed'){
@@ -119,15 +101,31 @@ function popupCalc() {
             scrollHide.style.overflow = 'scroll';
             deleteOptions();
          }
-         else if(target.className == 'button popup_calc_button' ){
-            popupCalc.style.display = 'none';
-            popupCalcProfile.style.display = 'flex';
-            sizeWindowHeght();
-            sizeWindowWidth();
-         }
-           
-         
-   });
+         else if(target.className == 'button popup_calc_button' && inputHeight.value != '' && inputWidth.value != ''){
+          popupCalc.style.display = 'none';
+          popupCalcProfile.style.display = 'flex';
+          options.height = inputHeight.value;
+          options.width = inputWidth.value;
+       }
+      else if (target.className == 'button popup_calc_button'){
+        swal({
+          type: 'error',
+          title: 'Oops...',
+          text: 'Введите пожалуйста ширину и высоту окна',
+        });
+        let popupCalcButton = document.querySelector('.popup_calc_button');
+             popupCalcButton.addEventListener('click',function(){
+              if(inputHeight.value == '' || inputWidth.value == ''){
+                swal({
+                  type: 'error',
+                  title: 'Oops...',
+                  text: 'Введите пожалуйста ширину и высоту окна',
+                });
+              }
+             });
+      }
+    }
+    popupCalc.addEventListener('click',showModalCalc);
 
    popupCalcProfile.addEventListener('click', (event) => {
     let target = event.target;
@@ -136,11 +134,24 @@ function popupCalc() {
         popupCalcProfile.style.display = 'none';
         scrollHide.style.overflow = 'scroll';
         deleteOptions();
-      }else if (target.className == 'button popup_calc_profile_button') {
+      }else if (target.className == 'button popup_calc_profile_button' && checkbox[0].checked != false) {
         popupCalcEnd.style.display = 'flex';
         popupCalcProfile.style.display = 'none';
         checkboxValue();
         selectValue();
+      }
+      else if(target.className == 'button popup_calc_profile_button' && checkbox[1].checked != false){
+        popupCalcEnd.style.display = 'flex';
+        popupCalcProfile.style.display = 'none';
+        checkboxValue();
+        selectValue();
+      }
+      else if (target.className == 'button popup_calc_profile_button'){
+        swal({
+          type: 'error',
+          title: 'Oops...',
+          text: 'Выберите тип остекления и его профиль',
+        });
       }
    });
 
