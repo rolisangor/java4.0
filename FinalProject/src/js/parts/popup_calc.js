@@ -91,8 +91,27 @@ function popupCalc() {
       popupCalcShow[i].addEventListener('click', () => {
          popupCalc.style.display = 'flex';
          scrollHide.style.overflow = 'hidden';
+
+         let popupCalcButton = document.querySelector('.popup_calc_button');
+             popupCalcButton.addEventListener('click',function(){
+              if(inputHeight.value == '' || inputWidth.value == '' || inputHeight.value == '0' || inputWidth.value == '0'){
+                swal({
+                  type: 'error',
+                  title: 'Oops...',
+                  text: 'Введите пожалуйста ширину и высоту окна',
+                });
+              }
+              else{
+                popupCalc.style.display = 'none';
+                popupCalcProfile.style.display = 'flex';
+                options.height = inputHeight.value;
+                options.width = inputWidth.value;
+              }
+             });
       });
     }
+
+
     function showModalCalc(event){
       let target = event.target;
             scrollHide.style.overflow = 'hidden';
@@ -101,31 +120,8 @@ function popupCalc() {
             scrollHide.style.overflow = 'scroll';
             deleteOptions();
          }
-         else if(target.className == 'button popup_calc_button' && inputHeight.value != '' && inputWidth.value != ''){
-          popupCalc.style.display = 'none';
-          popupCalcProfile.style.display = 'flex';
-          options.height = inputHeight.value;
-          options.width = inputWidth.value;
-       }
-      else if (target.className == 'button popup_calc_button'){
-        swal({
-          type: 'error',
-          title: 'Oops...',
-          text: 'Введите пожалуйста ширину и высоту окна',
-        });
-        let popupCalcButton = document.querySelector('.popup_calc_button');
-             popupCalcButton.addEventListener('click',function(){
-              if(inputHeight.value == '' || inputWidth.value == ''){
-                swal({
-                  type: 'error',
-                  title: 'Oops...',
-                  text: 'Введите пожалуйста ширину и высоту окна',
-                });
-              }
-             });
-      }
     }
-    popupCalc.addEventListener('click',showModalCalc);
+   popupCalc.addEventListener('click',showModalCalc);
 
    popupCalcProfile.addEventListener('click', (event) => {
     let target = event.target;
